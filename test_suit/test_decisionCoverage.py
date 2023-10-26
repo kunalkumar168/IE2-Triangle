@@ -8,6 +8,7 @@ class TestTriangleClassification(unittest.TestCase):
         self.assertEqual(Triangle.classify(1, 2, 5), Triangle.Type.INVALID)
         self.assertEqual(Triangle.classify(-5, 5, 5), Triangle.Type.INVALID)
         self.assertEqual(Triangle.classify(2, 3, 5), Triangle.Type.INVALID)
+        self.assertEqual(Triangle.classify(5, 5, 10), Triangle.Type.INVALID)
 
     def test_scalene_triangle(self):
         self.assertEqual(Triangle.classify(3, 4, 5), Triangle.Type.SCALENE)
